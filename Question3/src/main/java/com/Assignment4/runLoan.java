@@ -18,6 +18,7 @@ public class runLoan {
         Scanner input = new Scanner(System.in);
 
         do {
+            System.out.println("*****Loan Calculator*****");
             System.out.println("\t1. Student");
             System.out.println("\t2. Non Student");
             System.out.println("\t3. Exit");
@@ -40,6 +41,9 @@ public class runLoan {
                     interestAmount = stud.calculateInterest(principalAmount, years);
 
                     System.out.println("Principal amount:R " + principalAmount + "\tYears: " + years + "\tInterest amount:R " + interestAmount + "\tTotal amount:R " + (principalAmount + interestAmount)+ "\n");
+                    System.out.println("Press enter to continue...");
+                    input.nextLine();
+                    input.nextLine();
                     break;
                 case 2:
                     System.out.print("Enter loan amount:R ");
@@ -51,6 +55,9 @@ public class runLoan {
                     interestAmount = nonStud.calculateInterest(principalAmount, years);
 
                     System.out.println("Principal amount:R " + principalAmount + "\tYears: " + years + "\tInterest amount:R " + interestAmount + "\tTotal amount:R " + (principalAmount + interestAmount) + "\n");
+                    System.out.println("Press enter to continue...");
+                    input.nextLine();
+                    input.nextLine();
                     break;
                 case 3:
                     System.out.println("Exiting...");

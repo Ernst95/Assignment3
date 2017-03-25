@@ -1,9 +1,6 @@
 package com.Assignment4;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.*;
 
 /**
  * Created by Ernst on 2017/03/25.
@@ -74,12 +71,20 @@ public class runBook {
         }
 
         System.out.println("\nHashSet Collection");
-        System.out.println(bookSet);
+        for(String s : bookSet)
+        {
+           System.out.println(s);
+        }
 
         System.out.println("\nHashMap Collection");
-        System.out.println(bookMap);
+        for (String key : bookMap.keySet()) {
+            System.out.println(key + " " + bookMap.get(key));
+        }
 
         System.out.println("\nGeneric Collection");
-        System.out.println(bookCollection);
+        for(String t : bookCollection)
+        {
+            System.out.println(t);
+        }
     }
 }

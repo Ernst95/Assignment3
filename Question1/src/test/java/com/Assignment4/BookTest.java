@@ -29,7 +29,7 @@ public class BookTest {
     public void testSetAuthor() throws Exception {
         book = new Book();
 
-        book.setIsbn("J K Rowling");
+        book.setAuthor("J K Rowling");
         assertEquals("J K Rowling", book.getAuthor());
     }
 
@@ -37,7 +37,7 @@ public class BookTest {
     public void testSetTitle() throws Exception {
         book = new Book();
 
-        book.setIsbn("Harry Potter 1");
+        book.setTitle("Harry Potter 1");
         assertEquals("Harry Potter 1", book.getTitle());
     }
 
@@ -45,7 +45,7 @@ public class BookTest {
     public void testSetGenre() throws Exception {
         book = new Book();
 
-        book.setIsbn("Fantasy");
+        book.setGenre("Fantasy");
         assertEquals("Fantasy", book.getGenre());
     }
 
@@ -61,7 +61,7 @@ public class BookTest {
     public void testGetAuthor() throws Exception {
         book = new Book();
 
-        book.setIsbn("J K Rowling");
+        book.setAuthor("J K Rowling");
         assertEquals("J K Rowling", book.getAuthor());
     }
 
@@ -69,7 +69,7 @@ public class BookTest {
     public void testGetTitle() throws Exception {
         book = new Book();
 
-        book.setIsbn("Harry Potter 1");
+        book.setTitle("Harry Potter 1");
         assertEquals("Harry Potter 1", book.getTitle());
     }
 
@@ -77,7 +77,7 @@ public class BookTest {
     public void testGetGenre() throws Exception {
         book = new Book();
 
-        book.setIsbn("Fantasy");
+        book.setGenre("Fantasy");
         assertEquals("Fantasy", book.getGenre());
     }
 

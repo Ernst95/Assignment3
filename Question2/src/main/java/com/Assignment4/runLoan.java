@@ -15,6 +15,8 @@ public class runLoan {
         StudentServiceImpl cal = new StudentServiceImpl();
         Scanner input = new Scanner(System.in);
 
+        System.out.println("*****Loan Calculator*****");
+
         System.out.print("Enter loan amount:R ");
         principalAmount = input.nextDouble();
 
