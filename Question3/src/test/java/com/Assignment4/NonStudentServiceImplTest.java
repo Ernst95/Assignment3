@@ -1,30 +1,29 @@
 package com.Assignment4;
 
-import junit.framework.TestCase;
-import org.junit.*;
-import org.springframework.beans.BeansException;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Bean;
 
 import static org.junit.Assert.*;
 
 /**
  * Created by Ernst on 2017/03/25.
  */
-public class StudentServiceImplTest {
+public class NonStudentServiceImplTest {
 
     private LoanInterface loan;
 
     @Before
     public void setUp() throws Exception {
-
         ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
         loan = (LoanInterface)ctx.getBean("loan");
     }
 
     @After
     public void tearDown() throws Exception {
+
     }
 
     @Test

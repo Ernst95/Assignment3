@@ -11,18 +11,54 @@ public class runLoan {
         double principalAmount;
         int years;
         double interestAmount;
+        int choice;
 
-        StudentServiceImpl cal = new StudentServiceImpl();
+        StudentServiceImpl stud = new StudentServiceImpl();
+        NonStudentServiceImpl nonStud = new NonStudentServiceImpl();
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter loan amount:R ");
-        principalAmount = input.nextDouble();
+        do {
+            System.out.println("\t1. Student");
+            System.out.println("\t2. Non Student");
+            System.out.println("\t3. Exit");
+            System.out.print("Choose option: ");
+            choice = input.nextInt();
 
-        System.out.print("Enter number of years: ");
-        years = input.nextInt();
+            while (choice != 1 && choice != 2 && choice != 3) {
+                System.out.print("Invalid choice, please re-enter: ");
+                choice = input.nextInt();
+            }
 
-        interestAmount = cal.calculateInterest(principalAmount, years);
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter loan amount:R ");
+                    principalAmount = input.nextDouble();
 
-        System.out.println("Principal amount:R " + principalAmount + "\tYears: " + years + "\tInterest amount:R " + interestAmount + "\tTotal amount:R " + (principalAmount + interestAmount));
+                    System.out.print("Enter number of years: ");
+                    years = input.nextInt();
+
+                    interestAmount = stud.calculateInterest(principalAmount, years);
+
+                    System.out.println("Principal amount:R " + principalAmount + "\tYears: " + years + "\tInterest amount:R " + interestAmount + "\tTotal amount:R " + (principalAmount + interestAmount)+ "\n");
+                    break;
+                case 2:
+                    System.out.print("Enter loan amount:R ");
+                    principalAmount = input.nextDouble();
+
+                    System.out.print("Enter number of years: ");
+                    years = input.nextInt();
+
+                    interestAmount = nonStud.calculateInterest(principalAmount, years);
+
+                    System.out.println("Principal amount:R " + principalAmount + "\tYears: " + years + "\tInterest amount:R " + interestAmount + "\tTotal amount:R " + (principalAmount + interestAmount) + "\n");
+                    break;
+                case 3:
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Error...");
+            }
+
+        } while (choice != 3);
     }
 }
