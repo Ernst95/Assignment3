@@ -30,9 +30,9 @@ public class StudentServiceImplTest {
     @Test
     public void calculateInterest() throws Exception {
 
-        double interestAmount = loan.calculateInterest(2,1);
+        double interestAmount = loan.calculateInterest(4,1);
 
-        assertEquals(0.2,interestAmount,0);
+        assertEquals(0.8,interestAmount,0);
     }
 
 }
