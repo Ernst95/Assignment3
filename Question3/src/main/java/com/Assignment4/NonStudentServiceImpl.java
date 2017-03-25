@@ -3,7 +3,7 @@ package com.Assignment4;
 /**
  * Created by Ernst on 2017/03/25.
  */
-public class NonStudentServiceImpl {
+public class NonStudentServiceImpl implements LoanInterface {
 
     public NonStudentServiceImpl()
     {

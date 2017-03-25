@@ -20,7 +20,7 @@ public class StudentServiceImplTest {
     public void setUp() throws Exception {
 
         ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
-        loan = (LoanInterface)ctx.getBean("loan");
+        loan = (LoanInterface)ctx.getBean("loanStud");
     }
 
     @After
@@ -32,7 +32,7 @@ public class StudentServiceImplTest {
 
         double interestAmount = loan.calculateInterest(4,1);
 
-        assertEquals(0.8,interestAmount,0);
+        assertEquals(0.4,interestAmount,0);
     }
 
 }

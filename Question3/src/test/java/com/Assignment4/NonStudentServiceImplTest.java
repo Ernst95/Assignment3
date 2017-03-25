@@ -18,7 +18,7 @@ public class NonStudentServiceImplTest {
     @Before
     public void setUp() throws Exception {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
-        loan = (LoanInterface)ctx.getBean("loan");
+        loan = (LoanInterface)ctx.getBean("loanNonStud");
     }
 
     @After
@@ -31,7 +31,7 @@ public class NonStudentServiceImplTest {
 
         double interestAmount = loan.calculateInterest(2,1);
 
-        assertEquals(0.2,interestAmount,0);
+        assertEquals(0.4,interestAmount,0);
     }
 
 }

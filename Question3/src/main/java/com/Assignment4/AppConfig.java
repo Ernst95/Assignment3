@@ -9,9 +9,15 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class AppConfig {
-    @Bean(name = "loan")
+    @Bean(name = "loanStud")
     public LoanInterface getService()
     {
         return new StudentServiceImpl();
+    }
+
+    @Bean(name = "loanNonStud")
+    public LoanInterface getService2()
+    {
+        return new NonStudentServiceImpl();
     }
 }
